@@ -136,7 +136,7 @@ http://localhost:8501
 ---
 ## Live Demo
 
-🔗 https://novadocs-ai-b3umlkjxb62j8kkwkheway.streamlit.app/
+🔗 https://novadocs-ai.streamlit.app/
 ## 📖 How It Works
 
 1. User uploads one or more PDF documents.
