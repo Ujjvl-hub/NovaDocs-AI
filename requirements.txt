@@ -1,23 +1,25 @@
-streamlit
-langchain
-langchain-community
-langchain-core
-langchain-text-splitters
-langchain-huggingface
-langchain-mistralai
+streamlit==1.46.1
 
-chromadb
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-core==0.3.72
+langchain-text-splitters==0.3.9
+langchain-huggingface==0.3.1
+langchain-mistralai==0.2.11
 
-sentence-transformers
-transformers
-torch
+chromadb==0.4.24
 
-pypdf
+sentence-transformers==5.0.0
+transformers==4.53.2
+torch==2.7.1
 
-python-dotenv
+protobuf==3.20.3
 
-pandas
-numpy
+pypdf==5.8.0
 
-mistralai
+python-dotenv==1.1.1
 
+pandas==2.3.1
+numpy==2.3.1
+
+mistralai==1.9.3
