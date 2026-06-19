@@ -1,68 +1,23 @@
-
+streamlit
 langchain
 langchain-community
 langchain-core
 langchain-text-splitters
+langchain-huggingface
 langchain-mistralai
 
-mistralai
+chromadb
 
 sentence-transformers
 transformers
 torch
 
-
-chromadb
-faiss-cpu
-
-
 pypdf
-pdfplumber
-pymupdf
-python-docx
-unstructured
-openpyxl
-
-
-tiktoken
-nltk
-
-
-fastapi
-uvicorn
-requests
-
-
-streamlit
-
 
 python-dotenv
-
 
 pandas
 numpy
 
+mistralai
 
-loguru
-
-
-tqdm
-typing-extensions
-
-
-pytesseract
-Pillow
-
-beautifulsoup4
-lxml
-
-
-openai-whisper
-
-
-sqlalchemy
-
-
-llama-index
-llama-index-vector-stores-chroma
-llama-index-llms-mistralai
