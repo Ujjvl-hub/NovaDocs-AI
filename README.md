@@ -150,21 +150,6 @@ http://localhost:8501
 
 ---
 
-## 📸 Screenshots
-
-### Upload PDFs
-
-Add a screenshot here.
-
-### Chat Interface
-
-Add a screenshot here.
-
-### Retrieved Sources
-
-Add a screenshot here.
-
----
 
 ## 🎯 Future Improvements
 
