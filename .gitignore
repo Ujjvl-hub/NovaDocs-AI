@@ -1,0 +1,27 @@
+# Virtual Environment
+.venv/
+
+# Environment Variables
+.env
+
+# Chroma Vector Database
+chroma_db/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit Local Config
+.streamlit/
+
+# Upload Folder (if you create one later)
+uploads/
+
+# VS Code Settings (optional)
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
