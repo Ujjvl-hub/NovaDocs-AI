@@ -1,10 +1,15 @@
 streamlit
+
 langchain
 langchain-community
 langchain-core
+
 langchain-huggingface
+langchain-mistralai
+
 chromadb
 sentence-transformers
 faiss-cpu
+
 huggingface-hub
 tiktoken
