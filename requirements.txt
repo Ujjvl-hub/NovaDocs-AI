@@ -13,4 +13,5 @@ faiss-cpu
 huggingface-hub
 tiktoken
 
+pypdf
 protobuf==3.20.3
