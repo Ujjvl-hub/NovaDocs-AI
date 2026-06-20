@@ -1,7 +1,6 @@
 import os
 os.environ["STREAMLIT_SERVER_FILE_WATCHER_TYPE"] = "none"
 
-import shutil
 import tempfile
 import time
 
@@ -20,8 +19,6 @@ logging.set_verbosity_error()
 # -------------------------------------------------
 # CONFIG
 # -------------------------------------------------
-
-CHROMA_DIR = "chroma_db"
 
 st.set_page_config(
     page_title="NovaDocs AI",
@@ -75,13 +72,10 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 # -------------------------------------------------
-# VECTORSTORE CREATION (SAFE)
+# VECTORSTORE CREATION (IN-MEMORY, SAFE FOR STREAMLIT CLOUD)
 # -------------------------------------------------
 
 def build_vectorstore_from_pdfs(uploaded_files):
-
-    if os.path.exists(CHROMA_DIR):
-        shutil.rmtree(CHROMA_DIR, ignore_errors=True)
 
     all_docs = []
 
@@ -121,23 +115,14 @@ def build_vectorstore_from_pdfs(uploaded_files):
 
     embedding_model = get_embedding_model()
 
+    # No persist_directory -> in-memory Chroma instance.
+    # Avoids "readonly database" errors on Streamlit Cloud's ephemeral filesystem.
     vectorstore = Chroma.from_documents(
         documents=chunks,
-        embedding=embedding_model,
-        persist_directory=CHROMA_DIR
+        embedding=embedding_model
     )
 
     return vectorstore, len(all_docs), len(chunks)
-
-
-def load_existing_vectorstore():
-
-    embedding_model = get_embedding_model()
-
-    return Chroma(
-        persist_directory=CHROMA_DIR,
-        embedding_function=embedding_model
-    )
 
 # -------------------------------------------------
 # SESSION STATE
@@ -183,13 +168,6 @@ with st.sidebar:
 
                 except Exception as e:
                     st.error(str(e))
-
-    if st.session_state.vectorstore is None and os.path.exists(CHROMA_DIR):
-
-        if st.button("Load Existing Index", use_container_width=True):
-
-            st.session_state.vectorstore = load_existing_vectorstore()
-            st.session_state.book_name = "Previously Indexed PDFs"
 
     st.divider()
 
