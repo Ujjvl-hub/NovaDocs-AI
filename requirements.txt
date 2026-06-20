@@ -2,6 +2,7 @@ streamlit
 langchain
 langchain-community
 langchain-core
+langchain-huggingface
 chromadb
 sentence-transformers
 faiss-cpu
