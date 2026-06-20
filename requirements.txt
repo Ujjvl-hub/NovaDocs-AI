@@ -3,7 +3,6 @@ streamlit
 langchain
 langchain-community
 langchain-core
-
 langchain-huggingface
 langchain-mistralai
 
@@ -13,3 +12,5 @@ faiss-cpu
 
 huggingface-hub
 tiktoken
+
+protobuf==3.20.3
